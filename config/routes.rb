@@ -6,6 +6,7 @@ post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 get '/me', to: 'sessions#show'
 
+resources :cars, only: [:index, :create]
   # Defines the root path route ("/")
   # root "articles#index"
 end
