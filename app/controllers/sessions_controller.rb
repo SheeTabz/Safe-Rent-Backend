@@ -13,13 +13,14 @@ class SessionsController < ApplicationController
     def show 
         user = User.find_by(id: session[:user_id])
         if user
-            render json: user
+            render json: user, serializer:UserSerializer
         else
             render json: {errors: "Invalid user"}
         end
     end
 
     def destroy 
+        return render json: {errors: ["Invalide username or password"]}, status: :unauthorized unless session.include? :user_id
         session.delete(:user_id)
         head:no_content
     end
