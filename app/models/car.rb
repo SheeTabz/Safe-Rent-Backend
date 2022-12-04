@@ -1,3 +1,6 @@
 class Car < ApplicationRecord
-    validates :name, :class, :conditioning, :transmission, :price, :image_url, presence: true
+    has_many :reviews
+    
+  
+    validates :name, :level, :conditioning, :transmision, :price, :image_url, presence: true
 end
