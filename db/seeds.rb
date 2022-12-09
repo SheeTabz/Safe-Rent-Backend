@@ -189,10 +189,10 @@ data.map do|item|
     )
 end
 
-# reviews.map do |review|
-#     Review.create(
-#         comment: review[:comment],
-#         user_id: review[:user_id],
-#         car_id: review[:car_id]
-#     )
-# end
+reviews.map do |review|
+    Review.create(
+        comment: review[:comment],
+        user_id: review[:user_id],
+        car_id: review[:car_id]
+    )
+end
