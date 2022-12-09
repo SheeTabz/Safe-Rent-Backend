@@ -178,21 +178,21 @@ reviews=[
     },
 ]
 
-# data.map do|item|
-#     Car.create(
-#         name: item[:name],
-#         level: item[:level],
-#         conditioning: item[:conditioning],
-#         transmision: item[:transmision],
-#         price: item[:price],
-#         image_url: item[:image_url]
-#     )
-# end
-
-reviews.map do |review|
-    Review.create(
-        comment: review[:comment],
-        user_id: review[:user_id],
-        car_id: review[:car_id]
+data.map do|item|
+    Car.create(
+        name: item[:name],
+        level: item[:level],
+        conditioning: item[:conditioning],
+        transmision: item[:transmision],
+        price: item[:price],
+        image_url: item[:image_url]
     )
 end
+
+# reviews.map do |review|
+#     Review.create(
+#         comment: review[:comment],
+#         user_id: review[:user_id],
+#         car_id: review[:car_id]
+#     )
+# end
